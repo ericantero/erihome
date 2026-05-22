@@ -84,6 +84,11 @@ nav {
 
 .nav-links a:hover { color: var(--accent); }
 
+/* Ajuste para que el menú fijo no tape el inicio de la sección al hacer scroll */
+section {
+  scroll-margin-top: 80px; 
+}
+
 .hero {
   min-height: 100vh;
   display: grid;
@@ -579,10 +584,10 @@ footer {
 <nav>
   <a href="#" class="nav-logo">Eri <em>Home</em></a>
   <ul class="nav-links">
-    <li><a href="#">Artículos</a></li>
-    <li><a href="#">Categorías</a></li>
-    <li><a href="#">Sobre Eri</a></li>
-    <li><a href="#">Newsletter</a></li>
+    <li><a href="#articulos">Artículos</a></li>
+    <li><a href="#categorias">Categorías</a></li>
+    <li><a href="#sobre-eri">Sobre Eri</a></li>
+    <li><a href="#newsletter">Newsletter</a></li>
   </ul>
 </nav>
 
@@ -591,13 +596,13 @@ footer {
     <p class="hero-eyebrow">Estilo & Espacios Reales</p>
     <h1 class="hero-title">Decoración para <em>ser vivida.</em></h1>
     <p class="hero-text">Criterio propio, ambientes auténticos y la convicción de que un hogar no se mide por las tendencias, sino por cómo se disfruta desde adentro.</p>
-    <a href="#" class="hero-cta">Ver últimas notas</a>
+    <a href="#articulos" class="hero-cta">Ver últimas notas</a>
   </div>
   <div class="hero-right">
     <div class="hero-img-placeholder"></div>
     <div class="hero-right-inner">
       <div class="hero-img-text">
-        <p class="hero-img-quote">"Tu casa tiene que contar la historia de quién isos, y ser una colección de lo que amás."</p>
+        <p class="hero-img-quote">"Tu casa tiene que contar la historia de quién sos, y ser una colección de lo que amás."</p>
         <p class="hero-img-attr">Eri Home</p>
       </div>
     </div>
@@ -610,7 +615,7 @@ footer {
   <p class="intro-strip-aside">Nuevas ideas y reflexiones sobre diseño todas las semanas.</p>
 </div>
 
-<section class="section">
+<section id="articulos" class="section">
   <div class="section-header">
     <h2 class="section-title">Notas <em>Destacadas</em></h2>
     <a href="#" class="section-link">Ver blog completo</a>
@@ -664,7 +669,7 @@ footer {
   </div>
 </section>
 
-<section class="section categories-section">
+<section id="categorias" class="section categories-section">
   <div class="section-header">
     <h2 class="section-title">Explorar por <em>Temáticas</em></h2>
     <a href="#" class="section-link">Ver todo</a>
@@ -703,7 +708,7 @@ footer {
   </div>
 </section>
 
-<section class="about-section">
+<section id="sobre-eri" class="about-section">
   <div class="about-visual">
     <div class="about-visual-text">eri home.</div>
   </div>
@@ -720,7 +725,7 @@ footer {
   </div>
 </section>
 
-<section class="newsletter-section">
+<section id="newsletter" class="newsletter-section">
   <h2 class="newsletter-title">Sumate a las cartas de los domingos</h2>
   <p class="newsletter-text">Un correo semanal directo a tu bandeja de entrada con reflexiones lentas, recomendaciones de hallazgos decorativos e ideas para aplicar en casa.</p>
   <div class="newsletter-form">
@@ -737,10 +742,10 @@ footer {
   <div>
     <p class="footer-col-title">Explorar</p>
     <ul class="footer-links">
-      <li><a href="#">Artículos</a></li>
-      <li><a href="#">Categorías</a></li>
-      <li><a href="#">Sobre Eri</a></li>
-      <li><a href="#">Newsletter</a></li>
+      <li><a href="#articulos">Artículos</a></li>
+      <li><a href="#categorias">Categorías</a></li>
+      <li><a href="#sobre-eri">Sobre Eri</a></li>
+      <li><a href="#newsletter">Newsletter</a></li>
     </ul>
   </div>
   <div>
