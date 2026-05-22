@@ -56,4 +56,706 @@ nav {
   border-bottom: 0.5px solid var(--parchment);
 }
 
-.nav-logo
+.nav-logo {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 22px;
+  font-weight: 300;
+  letter-spacing: 0.08em;
+  color: var(--dark);
+  text-decoration: none;
+}
+
+.nav-logo em { font-style: italic; color: var(--accent); }
+
+.nav-links {
+  display: flex;
+  gap: 36px;
+  list-style: none;
+}
+
+.nav-links a {
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--earth);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.nav-links a:hover { color: var(--accent); }
+
+.hero {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding-top: 80px;
+}
+
+.hero-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 80px 64px 80px 48px;
+}
+
+.hero-eyebrow {
+  font-size: 10px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 24px;
+}
+
+.hero-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(52px, 6vw, 84px);
+  font-weight: 300;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  margin-bottom: 28px;
+  color: var(--dark);
+}
+
+.hero-title em {
+  font-style: italic;
+  color: var(--accent);
+  display: block;
+}
+
+.hero-text {
+  font-size: 15px;
+  line-height: 1.8;
+  color: var(--earth);
+  max-width: 420px;
+  margin-bottom: 40px;
+}
+
+.hero-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--dark);
+  text-decoration: none;
+  border-bottom: 0.5px solid var(--accent);
+  padding-bottom: 4px;
+  transition: color 0.2s, gap 0.2s;
+}
+
+.hero-cta:hover { color: var(--accent); gap: 18px; }
+
+.hero-right {
+  background: var(--warm);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-right-inner {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 48px;
+}
+
+.hero-img-placeholder {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(160deg, var(--parchment) 0%, var(--warm) 40%, #C9B99A 100%);
+}
+
+.hero-img-text {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-img-quote {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 26px;
+  font-style: italic;
+  font-weight: 300;
+  color: var(--bark);
+  line-height: 1.4;
+  max-width: 320px;
+}
+
+.hero-img-attr {
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--stone);
+  margin-top: 16px;
+}
+
+.intro-strip {
+  background: var(--dark);
+  padding: 48px;
+  display: flex;
+  gap: 48px;
+  align-items: center;
+  overflow: hidden;
+}
+
+.intro-strip-text {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(18px, 2.5vw, 26px);
+  font-style: italic;
+  font-weight: 300;
+  color: var(--parchment);
+  line-height: 1.5;
+  flex: 1;
+}
+
+.intro-strip-divider {
+  width: 0.5px;
+  height: 60px;
+  background: var(--earth);
+  flex-shrink: 0;
+}
+
+.intro-strip-aside {
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--stone);
+  flex-shrink: 0;
+  max-width: 160px;
+  line-height: 1.8;
+}
+
+.section {
+  padding: 100px 48px;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 56px;
+  border-bottom: 0.5px solid var(--parchment);
+  padding-bottom: 24px;
+}
+
+.section-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(36px, 4vw, 52px);
+  font-weight: 300;
+  line-height: 1;
+  color: var(--dark);
+}
+
+.section-title em { font-style: italic; color: var(--accent); }
+
+.section-link {
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--stone);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.section-link:hover { color: var(--accent); }
+
+.articles-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 2px;
+}
+
+.article-card {
+  background: var(--warm);
+  overflow: hidden;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.article-card:hover { background: var(--parchment); }
+
+.article-card.featured { grid-row: span 2; }
+
+.article-img {
+  width: 100%;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  display: block;
+}
+
+.article-img-placeholder {
+  width: 100%;
+  aspect-ratio: 4/3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.article-card.featured .article-img-placeholder {
+  aspect-ratio: 3/4;
+  background: linear-gradient(170deg, #C9B99A 0%, #8A6840 100%);
+}
+
+.article-img-placeholder.p2 { background: linear-gradient(135deg, var(--parchment), #B8A070); }
+.article-img-placeholder.p3 { background: linear-gradient(135deg, #B0C0A0, var(--warm)); }
+.article-img-placeholder.p4 { background: linear-gradient(135deg, #D0B890, var(--parchment)); }
+.article-img-placeholder.p5 { background: linear-gradient(135deg, var(--warm), #C8A878); }
+
+.article-body { padding: 24px 28px 28px; }
+
+.article-category {
+  font-size: 9px;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 10px;
+}
+
+.article-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 1.3;
+  color: var(--dark);
+  margin-bottom: 10px;
+}
+
+.article-card.featured .article-title { font-size: 30px; }
+
+.article-excerpt {
+  font-size: 13px;
+  line-height: 1.7;
+  color: var(--earth);
+}
+
+.categories-section { background: var(--bark); }
+
+.categories-section .section-title { color: var(--cream); }
+.categories-section .section-link { color: var(--stone); }
+.categories-section .section-header { border-bottom-color: rgba(255,255,255,0.1); }
+
+.categories-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 2px;
+}
+
+.cat-card {
+  background: rgba(255,255,255,0.04);
+  padding: 36px 24px;
+  cursor: pointer;
+  transition: background 0.3s;
+  border: 0.5px solid rgba(255,255,255,0.06);
+}
+
+.cat-card:hover { background: rgba(255,255,255,0.08); }
+
+.cat-num {
+  font-size: 9px;
+  letter-spacing: 0.2em;
+  color: var(--accent2);
+  margin-bottom: 16px;
+}
+
+.cat-icon { font-size: 28px; margin-bottom: 16px; }
+
+.cat-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 18px;
+  font-style: italic;
+  color: var(--cream);
+  margin-bottom: 8px;
+  line-height: 1.2;
+}
+
+.cat-desc {
+  font-size: 11px;
+  line-height: 1.6;
+  color: var(--stone);
+}
+
+.about-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 600px;
+}
+
+.about-visual {
+  background: linear-gradient(160deg, var(--parchment) 0%, #B89870 100%);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+  padding: 48px;
+}
+
+.about-visual-text {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 72px;
+  font-weight: 300;
+  font-style: italic;
+  color: rgba(30,23,18,0.12);
+  line-height: 1;
+  position: absolute;
+  bottom: -10px;
+  left: 32px;
+  letter-spacing: -0.04em;
+  pointer-events: none;
+}
+
+.about-content {
+  padding: 80px 64px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.about-eyebrow {
+  font-size: 10px;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 20px;
+}
+
+.about-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(36px, 4vw, 52px);
+  font-weight: 300;
+  line-height: 1.1;
+  color: var(--dark);
+  margin-bottom: 24px;
+}
+
+.about-title em { font-style: italic; color: var(--accent); }
+
+.about-text {
+  font-size: 14px;
+  line-height: 1.9;
+  color: var(--earth);
+  margin-bottom: 16px;
+}
+
+.about-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 24px;
+}
+
+.about-pill {
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  padding: 6px 14px;
+  border: 0.5px solid var(--stone);
+  border-radius: 99px;
+  color: var(--earth);
+}
+
+.newsletter-section {
+  background: var(--warm);
+  padding: 100px 48px;
+  text-align: center;
+}
+
+.newsletter-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(36px, 5vw, 60px);
+  font-weight: 300;
+  font-style: italic;
+  color: var(--dark);
+  margin-bottom: 16px;
+}
+
+.newsletter-text {
+  font-size: 14px;
+  color: var(--earth);
+  max-width: 480px;
+  margin: 0 auto 40px;
+  line-height: 1.8;
+}
+
+.newsletter-form {
+  display: flex;
+  gap: 0;
+  max-width: 440px;
+  margin: 0 auto;
+  border: 0.5px solid var(--stone);
+  background: var(--cream);
+}
+
+.newsletter-input {
+  flex: 1;
+  padding: 16px 20px;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-family: 'Jost', sans-serif;
+  font-size: 13px;
+  color: var(--dark);
+}
+
+.newsletter-input::placeholder { color: var(--stone); }
+
+.newsletter-btn {
+  padding: 16px 28px;
+  background: var(--dark);
+  color: var(--cream);
+  border: none;
+  font-family: 'Jost', sans-serif;
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.newsletter-btn:hover { background: var(--dark); opacity: 0.8; }
+
+footer {
+  background: var(--dark);
+  color: var(--cream);
+  padding: 80px 48px 60px;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 64px;
+  border-bottom: 0.5px solid rgba(255,255,255,0.05);
+}
+
+.footer-brand-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 24px;
+  letter-spacing: 0.05em;
+  margin-bottom: 16px;
+}
+
+.footer-brand-name em { font-style: italic; color: var(--accent); }
+
+.footer-brand-text {
+  font-size: 13px;
+  line-height: 1.8;
+  color: var(--stone);
+  max-width: 320px;
+}
+
+.footer-col-title {
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--accent2);
+  margin-bottom: 24px;
+}
+
+.footer-links { list-style: none; }
+.footer-links li { margin-bottom: 12px; }
+
+.footer-links a {
+  font-size: 13px;
+  color: var(--parchment);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.footer-links a:hover { color: var(--accent2); }
+
+.footer-bottom {
+  background: var(--dark);
+  padding: 24px 48px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-copy {
+  font-size: 11px;
+  color: var(--earth);
+  letter-spacing: 0.05em;
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="#" class="nav-logo">Eri <em>Home</em></a>
+  <ul class="nav-links">
+    <li><a href="#">Artículos</a></li>
+    <li><a href="#">Categorías</a></li>
+    <li><a href="#">Sobre Eri</a></li>
+    <li><a href="#">Newsletter</a></li>
+  </ul>
+</nav>
+
+<section class="hero">
+  <div class="hero-left">
+    <p class="hero-eyebrow">Estilo & Espacios Reales</p>
+    <h1 class="hero-title">Decoración para <em>ser vivida.</em></h1>
+    <p class="hero-text">Criterio propio, ambientes auténticos y la convicción de que un hogar no se mide por las tendencias, sino por cómo se disfruta desde adentro.</p>
+    <a href="#" class="hero-cta">Ver últimas notas</a>
+  </div>
+  <div class="hero-right">
+    <div class="hero-img-placeholder"></div>
+    <div class="hero-right-inner">
+      <div class="hero-img-text">
+        <p class="hero-img-quote">"Tu casa tiene que contar la historia de quién isos, y ser una colección de lo que amás."</p>
+        <p class="hero-img-attr">Eri Home</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="intro-strip">
+  <p class="intro-strip-text">Hablemos de casas reales. Sin filtros de revista, con las marcas de la rutina y la belleza de lo cotidiano.</p>
+  <div class="intro-strip-divider"></div>
+  <p class="intro-strip-aside">Nuevas ideas y reflexiones sobre diseño todas las semanas.</p>
+</div>
+
+<section class="section">
+  <div class="section-header">
+    <h2 class="section-title">Notas <em>Destacadas</em></h2>
+    <a href="#" class="section-link">Ver blog completo</a>
+  </div>
+  
+  <div class="articles-grid">
+    <div class="article-card featured">
+      <div class="article-img-placeholder"></div>
+      <div class="article-body">
+        <p class="article-category">Espacios</p>
+        <h3 class="article-title">El arte de armar un living que invite a quedarse todo el día</h3>
+        <p class="article-excerpt">Dejemos de diseñar para las visitas. Claves prácticas para elegir sillones, distribuir la luz y priorizar la comodidad real por sobre la estética rígida de catálogo.</p>
+      </div>
+    </div>
+    
+    <div class="article-card">
+      <div class="article-img-placeholder p2"></div>
+      <div class="article-body">
+        <p class="article-category">Objetos</p>
+        <h3 class="article-title">Criterio propio al elegir texturas</h3>
+        <p class="article-excerpt">Cómo combinar mantas, almohadones y alfombras sin caer en el combo armado de local comercial.</p>
+      </div>
+    </div>
+    
+    <div class="article-card">
+      <div class="article-img-placeholder p3"></div>
+      <div class="article-body">
+        <p class="article-category">Filosofía</p>
+        <h3 class="article-title">Casas perfectas vs. Casas vividas</h3>
+        <p class="article-excerpt">Una reflexión necesaria sobre por qué el desorden cotidiano también es parte de la belleza de un hogar.</p>
+      </div>
+    </div>
+
+    <div class="article-card">
+      <div class="article-img-placeholder p4"></div>
+      <div class="article-body">
+        <p class="article-category">Detalles</p>
+        <h3 class="article-title">La magia de la iluminación indirecta</h3>
+        <p class="article-excerpt">Pasos simples para transformar por completo el clima de tu dormitorio usando lámparas de apoyo.</p>
+      </div>
+    </div>
+    
+    <div class="article-card">
+      <div class="article-img-placeholder p5"></div>
+      <div class="article-body">
+        <p class="article-category">Organización</p>
+        <h3 class="article-title">Rincones con propósito e identidad</h3>
+        <p class="article-excerpt">Ideas para aprovechar esos metros cuadrados vacíos y convertirlos en tu lugar preferido de la casa.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section categories-section">
+  <div class="section-header">
+    <h2 class="section-title">Explorar por <em>Temáticas</em></h2>
+    <a href="#" class="section-link">Ver todo</a>
+  </div>
+  <div class="categories-grid">
+    <div class="cat-card">
+      <p class="cat-num">01</p>
+      <div class="cat-icon">🛋️</div>
+      <h3 class="cat-name">Interiores</h3>
+      <p class="cat-desc">Inspiración y distribución para cada ambiente.</p>
+    </div>
+    <div class="cat-card">
+      <p class="cat-num">02</p>
+      <div class="cat-icon">🏺</div>
+      <h3 class="cat-name">Objetos</h3>
+      <p class="cat-desc">Detalles y piezas con historia propia.</p>
+    </div>
+    <div class="cat-card">
+      <p class="cat-num">03</p>
+      <div class="cat-icon">🌿</div>
+      <h3 class="cat-name">Plantas</h3>
+      <p class="cat-desc">La vida verde y cómo integrarla con éxito.</p>
+    </div>
+    <div class="cat-card">
+      <p class="cat-num">04</p>
+      <div class="cat-icon">🎨</div>
+      <h3 class="cat-name">Color</h3>
+      <p class="cat-desc">Paletas que transmiten calma y calidez.</p>
+    </div>
+    <div class="cat-card">
+      <p class="cat-num">05</p>
+      <div class="cat-icon">📝</div>
+      <h3 class="cat-name">Crónicas</h3>
+      <p class="cat-desc">Reflexiones sobre el habitar y el día a día.</p>
+    </div>
+  </div>
+</section>
+
+<section class="about-section">
+  <div class="about-visual">
+    <div class="about-visual-text">eri home.</div>
+  </div>
+  <div class="about-content">
+    <p class="about-eyebrow">Detrás de Eri Home</p>
+    <h2 class="about-title">Creo en los espacios que tienen <em>historias para contar.</em></h2>
+    <p class="about-text">Hola, soy Eri. Este proyecto nació de las ganas de derribar la idea de que la decoración es algo inalcanzable o rígido. Mi objetivo es ayudarte a mirar tu casa con otros ojos, aportando ideas reales que se adapten a tu rutina.</p>
+    <p class="about-text">No busco la simetría perfecta; busco la calidez, la textura, los rincones que te abrazan cuando volvés de trabajar y los espacios preparados para disfrutar con otros.</p>
+    <div class="about-pills">
+      <span class="about-pill">Diseño Vivible</span>
+      <span class="about-pill">Espacios Reales</span>
+      <span class="about-pill">Identidad Única</span>
+    </div>
+  </div>
+</section>
+
+<section class="newsletter-section">
+  <h2 class="newsletter-title">Sumate a las cartas de los domingos</h2>
+  <p class="newsletter-text">Un correo semanal directo a tu bandeja de entrada con reflexiones lentas, recomendaciones de hallazgos decorativos e ideas para aplicar en casa.</p>
+  <div class="newsletter-form">
+    <input type="email" class="newsletter-input" placeholder="Tu correo electrónico">
+    <button class="newsletter-btn">Suscribirme</button>
+  </div>
+</section>
+
+<footer>
+  <div>
+    <p class="footer-brand-name">Eri <em>Home</em></p>
+    <p class="footer-brand-text">Decoración de interiores para ser vivido. Criterio propio, espacios reales y la convicción de que un hogar se mide por cómo se vive adentro.</p>
+  </div>
+  <div>
+    <p class="footer-col-title">Explorar</p>
+    <ul class="footer-links">
+      <li><a href="#">Artículos</a></li>
+      <li><a href="#">Categorías</a></li>
+      <li><a href="#">Sobre Eri</a></li>
+      <li><a href="#">Newsletter</a></li>
+    </ul>
+  </div>
+  <div>
+    <p class="footer-col-title">Redes</p>
+    <ul class="footer-links">
+      <li><a href="#">TikTok</a></li>
+      <li><a href="#">Instagram</a></li>
+      <li><a href="#">Pinterest</a></li>
+    </ul>
+  </div>
+</footer>
+<div class="footer-bottom">
+  <p class="footer-copy">© 2026 Eri Home</p>
+  <p class="footer-copy">Argentina</p>
+</div>
+
+</body>
+</html>
