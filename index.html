@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Eri Home</title>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght=0,300;0,400;0,500;1,300;1,400&family=Jost:wght=200;300;400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@200;300;400&display=swap" rel="stylesheet">
 <style>
 :root {
   --cream: #F4EFE6; --warm: #EAE0D0; --parchment: #DDD3C0; --stone: #B8A898;
@@ -32,7 +32,8 @@ section { scroll-margin-top: 80px; }
 .hero-cta:hover { color: var(--accent); gap: 18px; }
 .hero-right { background: var(--warm); position: relative; overflow: hidden; }
 .hero-right-inner { position: absolute; inset: 0; display: flex; flex-direction: column; justify-content: flex-end; padding: 48px; }
-.hero-img-placeholder { position: absolute; inset: 0; background: linear-gradient(160deg, var(--parchment) 0%, var(--warm) 40%, #C9B99A 100%); }
+.hero-img-placeholder { position: absolute; inset: 0; background: linear-gradient(160deg, var(--parchment) 0%, var(--warm) 40%, #C9B99A 100%); display: flex; justify-content: center; align-items: center; } /* Modified */
+.hero-img-placeholder img { width: 100%; height: 100%; object-fit: cover; } /* Added */
 .hero-img-text { position: relative; z-index: 2; }
 .hero-img-quote { font-family: 'Cormorant Garamond', serif; font-size: 26px; font-style: italic; font-weight: 300; color: var(--bark); line-height: 1.4; max-width: 320px; }
 .hero-img-attr { font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--stone); margin-top: 16px; }
@@ -53,8 +54,10 @@ section { scroll-margin-top: 80px; }
 .article-card { background: var(--warm); overflow: hidden; cursor: pointer; transition: background 0.3s; }
 .article-card:hover { background: var(--parchment); }
 .article-card.featured { grid-row: span 2; }
-.article-img-placeholder { width: 100%; aspect-ratio: 4/3; display: flex; align-items: center; justify-content: center; }
-.article-card.featured .article-img-placeholder { aspect-ratio: 3/4; background: linear-gradient(170deg, #C9B99A 0%, #8A6840 100%); }
+.article-img-placeholder { width: 100%; aspect-ratio: 4/3; display: flex; align-items: center; justify-content: center; } /* Modified */
+.article-img-placeholder img { width: 100%; height: 100%; object-fit: cover; } /* Added */
+.article-card.featured .article-img-placeholder { aspect-ratio: 3/4; background: linear-gradient(170deg, #C9B99A 0%, #8A6840 100%); } /* Modified */
+.article-card.featured .article-img-placeholder img { width: 100%; height: 100%; object-fit: cover; } /* Added */
 .article-img-placeholder.p2 { background: linear-gradient(135deg, var(--parchment), #B8A070); }
 .article-img-placeholder.p3 { background: linear-gradient(135deg, #B0C0A0, var(--warm)); }
 .article-img-placeholder.p4 { background: linear-gradient(135deg, #D0B890, var(--parchment)); }
@@ -89,7 +92,8 @@ section { scroll-margin-top: 80px; }
 .cat-desc { font-size: 11px; line-height: 1.6; color: var(--stone); }
 
 .about-section { display: grid; grid-template-columns: 1fr 1fr; min-height: 600px; }
-.about-visual { background: linear-gradient(160deg, var(--parchment) 0%, #B89870 100%); position: relative; overflow: hidden; display: flex; align-items: flex-end; padding: 48px; }
+.about-visual { background: linear-gradient(160deg, var(--parchment) 0%, #B89870 100%); position: relative; overflow: hidden; display: flex; align-items: flex-end; padding: 48px; } /* Modified */
+.about-visual img { width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0; } /* Added */
 .about-visual-text { font-family: 'Cormorant Garamond', serif; font-size: 72px; font-weight: 300; font-style: italic; color: rgba(30,23,18,0.12); line-height: 1; position: absolute; bottom: -10px; left: 32px; letter-spacing: -0.04em; pointer-events: none; }
 .about-content { padding: 80px 64px; display: flex; flex-direction: column; justify-content: center; }
 .about-eyebrow { font-size: 10px; letter-spacing: 0.25em; text-transform: uppercase; color: var(--accent); margin-bottom: 20px; }
@@ -156,7 +160,9 @@ footer { background: var(--dark); color: var(--stone); padding: 60px 48px; borde
     <a href="#articulos" class="hero-cta">Explorar la bitácora</a>
   </div>
   <div class="hero-right">
-    <div class="hero-img-placeholder"></div>
+    <div class="hero-img-placeholder">
+      <img src="https://via.placeholder.com/600x800?text=Hero+Image" alt="Diseño de interiores cálido y minimalista">
+    </div>
     <div class="hero-right-inner">
       <div class="hero-img-text">
         <p class="hero-img-quote">“La casa debe ser el estuche de la vida, el nido de la felicidad.”</p>
@@ -177,10 +183,12 @@ footer { background: var(--dark); color: var(--stone); padding: 60px 48px; borde
     <h2 class="section-title">En la <em>bitácora</em></h2>
     <a href="#" class="section-link">Ver todas las notas</a>
   </div>
-  
+
   <div class="articles-grid">
     <div class="article-card featured">
-      <div class="article-img-placeholder"></div>
+      <div class="article-img-placeholder">
+        <img src="https://via.placeholder.com/800x1000?text=Featured+Article" alt="Artículo destacado sobre minimalismo cálido">
+      </div>
       <div class="article-body">
         <p class="article-category">Teoría del Espacio</p>
         <h3 class="article-title">La sutileza del minimalismo cálido: Cómo despojar sin perder el alma</h3>
@@ -189,7 +197,9 @@ footer { background: var(--dark); color: var(--stone); padding: 60px 48px; borde
     </div>
 
     <div class="article-card">
-      <div class="article-img-placeholder p2"></div>
+      <div class="article-img-placeholder p2">
+        <img src="https://via.placeholder.com/600x450?text=Iluminación" alt="Artículo sobre iluminación interior">
+      </div>
       <div class="article-body">
         <p class="article-category">Iluminación</p>
         <h3 class="article-title">La luz esculpe el volumen</h3>
@@ -198,7 +208,9 @@ footer { background: var(--dark); color: var(--stone); padding: 60px 48px; borde
     </div>
 
     <div class="article-card">
-      <div class="article-img-placeholder p3"></div>
+      <div class="article-img-placeholder p3">
+        <img src="https://via.placeholder.com/600x450?text=Materiales" alt="Artículo sobre materiales naturales como madera y lino">
+      </div>
       <div class="article-body">
         <p class="article-category">Materiales</p>
         <h3 class="article-title">Madera y lino puro</h3>
@@ -207,7 +219,9 @@ footer { background: var(--dark); color: var(--stone); padding: 60px 48px; borde
     </div>
 
     <div class="article-card">
-      <div class="article-img-placeholder p4"></div>
+      <div class="article-img-placeholder p4">
+        <img src="https://via.placeholder.com/600x450?text=Rincón+Lectura" alt="Artículo sobre diseño de rincón de lectura">
+      </div>
       <div class="article-body">
         <p class="article-category">Recorridos</p>
         <h3 class="article-title">El encanto del rincón de lectura</h3>
@@ -216,7 +230,9 @@ footer { background: var(--dark); color: var(--stone); padding: 60px 48px; borde
     </div>
 
     <div class="article-card">
-      <div class="article-img-placeholder p5"></div>
+      <div class="article-img-placeholder p5">
+        <img src="https://via.placeholder.com/600x450?text=Botánica" alt="Artículo sobre el uso de botánica en decoración">
+      </div>
       <div class="article-body">
         <p class="article-category">Botánica</p>
         <h3 class="article-title">Ramas secas y siluetas</h3>
@@ -231,7 +247,7 @@ footer { background: var(--dark); color: var(--stone); padding: 60px 48px; borde
     <h2 class="section-title">Herramientas & <em>Elegidos</em></h2>
     <p class="section-link" style="text-transform:none; letter-spacing:0;">Alianzas y códigos exclusivos para la comunidad.</p>
   </div>
-  
+
   <div class="affiliates-grid">
     <a href="https://go.planner5d.com/click?pid=2441&offer_id=43&sub1=yourclickid&sub2=your_sub_pub_id&sub3=any_side_info" target="_blank" class="affiliate-card">
       <div>
@@ -321,6 +337,7 @@ footer { background: var(--dark); color: var(--stone); padding: 60px 48px; borde
 
 <section id="sobre-mi" class="about-section">
   <div class="about-visual">
+    <img src="https://via.placeholder.com/800x600?text=About+Me+Image" alt="Imagen sobre Eri Home">
     <div class="about-visual-text">Eri Home</div>
   </div>
   <div class="about-content">
@@ -361,6 +378,5 @@ footer { background: var(--dark); color: var(--stone); padding: 60px 48px; borde
   </div>
 </footer>
 
-<!-- Última actualización: 2026-05-22 19:26:16 -->
 </body>
 </html>
