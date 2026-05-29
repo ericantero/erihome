@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
-    
+
     <style>
         :root {
             --cream: #FDFBF7;
@@ -19,276 +19,51 @@
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        
-        body { 
-            background: var(--cream); 
-            color: var(--dark); 
-            font-family: 'DM Sans', sans-serif; 
-            font-weight: 300; 
-            min-height: 100vh; 
-            padding: 60px 40px; 
-            max-width: 720px; 
-            margin: 0 auto; 
-        }
-        
-        .eyebrow { 
-            font-family: 'DM Sans', sans-serif; 
-            font-size: 10px; 
-            letter-spacing: 0.2em; 
-            text-transform: uppercase; 
-            color: var(--earth); 
-            margin-bottom: 12px; 
-        }
-        
-        h1 { 
-            font-family: 'Cormorant Garamond', serif; 
-            font-size: clamp(48px, 8vw, 72px); 
-            font-weight: 300; 
-            line-height: 1; 
-            letter-spacing: -0.02em; 
-            margin-bottom: 6px; 
-        }
-        
-        h1 em { font-style: italic; color: var(--accent); }
-        
-        .subtitle { 
-            font-family: 'Cormorant Garamond', serif; 
-            font-size: 16px; 
-            font-style: italic; 
-            color: var(--earth); 
-            margin-bottom: 60px; 
-            padding-bottom: 40px; 
-            border-bottom: 0.5px solid var(--stone); 
-        }
-        
-        .section { margin-bottom: 48px; }
-        
-        .section-label { 
-            font-size: 9px; 
-            letter-spacing: 0.25em; 
-            text-transform: uppercase; 
-            color: var(--stone); 
-            margin-bottom: 20px; 
-            display: flex; 
-            align-items: center; 
-            gap: 12px; 
-        }
-        
-        .section-label::after { 
-            content: ''; 
-            flex: 1; 
-            height: 0.5px; 
-            background: var(--warm); 
-        }
 
-        .manifiesto { 
-            font-family: 'Cormorant Garamond', serif; 
-            font-size: clamp(22px, 4vw, 28px); 
-            font-weight: 300; 
-            line-height: 1.6; 
-            color: var(--dark); 
-            margin-bottom: 32px; 
-        }
-        
-        .manifiesto strong { font-weight: 400; color: var(--accent); }
-
-        /* CATEGORÍAS */
-        .pill-group { 
-            display: flex; 
-            flex-wrap: wrap; 
-            gap: 8px; 
-            margin-top: 16px; 
-        }
-        
-        .pill { 
-            font-size: 11px; 
-            letter-spacing: 0.08em; 
-            padding: 6px 16px; 
-            border: 0.5px solid var(--stone); 
-            border-radius: 99px; 
-            color: var(--earth); 
-            background: transparent; 
-        }
-
-        /* TARJETAS DE CONTENIDO */
-        .video-card {   
-            border: 0.5px solid var(--stone);
-            border-radius: 4px;   
-            overflow: hidden;
-            margin-bottom: 16px;   
-        }   
-        
-        .video-header {   
-            background: var(--dark);   
-            color: var(--cream);   
-            padding: 14px 24px;
-            display: flex;   
-            justify-content: space-between;   
-            align-items: center;   
-        }   
-        
-        .video-num {   
-            font-size: 9px;   
-            letter-spacing: 0.2em;   
-            text-transform: uppercase;   
-            color: var(--stone);
-        }   
-        
-        .video-tag {   
-            font-size: 10px;   
-            letter-spacing: 0.1em;   
-            color: var(--accent);   
-            text-transform: uppercase;
-        }   
-        
-        .video-body { padding: 28px 24px; background: var(--warm); }   
-        
-        .video-title {   
-            font-family: 'Cormorant Garamond', serif;   
-            font-size: 28px;   
-            font-style: italic;   
-            color: var(--dark);   
-            margin-bottom: 18px;   
-            line-height: 1.2;
-        }   
-        
-        .video-detail {   
-            font-size: 14px;   
-            line-height: 1.8;   
-            color: var(--earth);
-            margin-bottom: 14px;
-        }   
-        
-        .video-detail:last-of-type { margin-bottom: 0; }
-
-        .quote {   
-            font-family: 'Cormorant Garamond', serif;   
-            font-size: 18px;   
-            font-style: italic;   
-            color: var(--dark);   
-            border-left: 2px solid var(--accent);
-            padding: 12px 18px;   
-            margin: 20px 0;   
-            line-height: 1.5;   
-            background: var(--cream);   
-            border-radius: 0 4px 4px 0;   
-        }
-
-        /* LINK MONETIZACIÓN */
-        .afiliado-box {
+        body {
             background: var(--cream);
-            border: 0.5px dashed var(--accent);
-            border-radius: 4px;
-            padding: 16px 20px;
-            margin: 24px 0;
+            color: var(--dark);
+            font-family: 'DM Sans', sans-serif;
+            font-weight: 300;
+            min-height: 100vh;
+            padding: 60px 40px;
+            max-width: 720px;
+            margin: 0 auto;
         }
 
-        .afiliado-link {
-            font-size: 12px;
-            letter-spacing: 0.05em;
-            color: var(--accent);
-            text-decoration: none;
-            font-weight: 500;
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
+        .eyebrow {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 10px;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--earth);
+            margin-bottom: 12px;
         }
 
-        .afiliado-link:hover {
-            text-decoration: underline;
+        h1 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(48px, 8vw, 72px);
+            font-weight: 300;
+            line-height: 1;
+            letter-spacing: -0.02em;
+            margin-bottom: 6px;
         }
 
-        footer { 
-            margin-top: 80px; 
-            text-align: center; 
-            font-size: 10px; 
-            letter-spacing: 0.15em; 
-            text-transform: uppercase; 
-            color: var(--stone); 
-        }
-        
-        @media (max-width: 500px) { 
-            body { padding: 40px 24px; } 
+        h1 em { font-style: italic; color: var(--accent); }
+
+        .subtitle {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 16px;
+            font-style: italic;
+            color: var(--earth);
+            margin-bottom: 60px;
+            padding-bottom: 40px;
+            border-bottom: 0.5px solid var(--stone);
         }
     </style>
 </head>
 <body>
-
-    <p class="eyebrow">Bitácora de Diseño</p>
-    <h1>Eri <em>Home</em></h1>
-    <p class="subtitle">Celebrar el diseño real y los espacios vividos.</p>
-
-    <div class="section">
-        <div class="section-label">Manifiesto</div>
-        <p class="manifiesto">
-            Defendemos la <strong>autenticidad</strong> frente a la perfección fría de las galerías de fotos. El verdadero diseño pasa por habitar los espacios y convertirlos en un verdadero refugio cotidiano.
-        </p>
-        
-        <div class="pill-group">
-            <span class="pill">Textiles & Confort</span>
-            <span class="pill">Iluminación de Atmósfera</span>
-            <span class="pill">Objetos con Historia</span>
-            <span class="pill">Naturaleza Interior</span>
-            <span class="pill">El Hogar como Refugio</span>
-        </div>
-    </div>
-
-    <div class="section">
-        <div class="section-label">Último Artículo</div>
-        
-        <div class="video-card">
-            <div class="video-header">
-                <span class="video-num">Por Eri Home</span>
-                <span class="video-tag">Textiles & Confort</span>
-            </div>
-            <div class="video-body">
-                <h2 class="video-title">El arte de vestir un espacio para que abrigue de verdad</h2>
-                
-                <p class="video-detail">
-                    Hay una delgada línea entre una casa de catálogo y un hogar real. Las revistas nos han vendido durante años la idea de espacios inmaculados, con superficies frías, minimalismos rígidos y almohadones perfectamente mullidos que parecen gritar "mirame pero no me toques".
-                </p>
-                
-                <p class="video-detail">
-                    Pero seamos honestas: si un sillón es impecable pero te da culpa tirarte a leer o miedo de volcar el café, para mí no es diseño; es simplemente un decorado.
-                </p>
-                
-                <p class="video-detail">
-                    Ahora que el otoño se instaló del todo y los días se vuelven más cortos y frescos, el living deja de ser un lugar de paso para convertirse en el búnker oficial de la casa. Es la temporada donde el adentro cobra todo el sentido, donde colgás el día, estirás los pies y buscás refugio. Y en este ritual de guardarse, los textiles no son simples accesorios de decoración; son los que deciden, en silencio, si te dan ganas de quedarte en un lugar o si preferís irte.
-                </p>
-
-                <p class="quote">
-                    "El verdadero diseño de una casa no se mide por lo caro de sus muebles, sino por cómo se nota cuando el living se llena de amigos y nadie está preocupado por cuidar nada."
-                </p>
-
-                <h3 class="eyebrow" style="margin-top: 24px; margin-bottom: 8px;">Vestir el sillón (y habitarlo)</h3>
-                <p class="video-detail">
-                    Vestir un espacio para el frío se trata de sumar capas que te abracen. Pensá en texturas que convivan orgánicamente: el lino texturado de los almohadones, la nobleza de una alfombra que te recibe descalza y, por supuesto, las mantas. Prefiero mil veces una manta tejida a mano que se desarme un poco por el uso, antes que un textil sintético perfecto que no abriga a nadie. Esas imperfecciones cuentan la historia de las tardes que pasaste ahí adentro.
-                </p>
-
-                <div class="afiliado-box">
-                    <p class="video-detail" style="font-size: 13px; margin-bottom: 8px; font-style: italic;">¿Buscás armar tu propio rincón de descanso?</p>
-                    <a class="afiliado-link" href="https://meli.la/1gGbjyj" target="_blank">
-                        ✨ Encontrá acá la manta XL tejida y textiles de lino seleccionados para tu espacio →
-                    </a>
-                </div>
-
-                <h3 class="eyebrow" style="margin-top: 24px; margin-bottom: 8px;">Aliados otoñales: luz y naturaleza</h3>
-                <p class="video-detail">
-                    Para que el confort sea total, las texturas necesitan compañía. Las plantas adentro de la casa no están para rellenar esquinas vacías; están para recordarnos que los espacios también están vivos mientras afuera todo cambia de color. Dejala que conviva con tu sillón, que una rama caiga cerca de donde descansás la taza de café.
-                </p>
-                
-                <p class="video-detail">
-                    Y cuando caiga el sol temprano, escapale a la luz blanca de techo que hace que tu living parezca una oficina. El otoño te pide prender una vela, encender esa lámpara de pie tenue al lado del sillón y ver pasar la tarde.
-                </p>
-                
-                <p class="video-detail" style="font-style: italic; margin-top: 18px; color: var(--dark);">
-                    Al final del día, no hay un solo estilo para armar un hogar. Lo único que importa es tener un criterio propio para crear tu propio refugio. Así que dejá los almohadones despeinados, ponete cómoda y habitá tu casa.
-                </p>
-            </div>
-        </div>
-    </div>
-
-    <footer>Eri Home &copy; 2026 · Diseñado con Alma</footer>
-
+    <!-- Content would go here in a complete HTML -->
+<!-- Última actualización: 2026-05-29 14:48:39 -->
 </body>
 </html>
